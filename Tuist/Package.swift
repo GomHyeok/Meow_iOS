@@ -7,7 +7,11 @@
 
 let packageSetting = PackageSettings(
     productTypes : [
-        "Alamofire" : .framework
+        "Alamofire" : .framework,
+        "RxSwift" : .framework,
+        "RxCocoa" : .framework,
+        "RxDataSources" : .framework,
+        "Moya" : .framework,
     ]
 )
 #endif
