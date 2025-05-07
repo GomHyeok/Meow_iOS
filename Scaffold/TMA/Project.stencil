@@ -1,0 +1,70 @@
+//
+//  Project.swift
+//
+//  Created by {{ author }} on {{ currentDate }}
+//
+
+import ProjectDescription
+import ConfigurationPlugin
+import DependencyPlugin
+
+let project = Project(
+    name: "{{ name }}Module",
+    targets: [
+        // Example
+        .target(
+            name: "{{ name }}FeatureExample",
+            destinations: .iOS,
+            product: .app,
+            bundleId: "com.{{ author }}.feature.{{ name }}.example",
+            infoPlist: .example_app,
+            sources: ["Example/Sources/**"],
+            resources: ["Example/Resources/**"],
+            dependencies: [
+                .target(name: "{{ name }}Feature"),
+                .target(name: "{{ name }}FeatureTesting"),
+            ]
+        ),
+
+
+        // Tests
+        .target(
+            name: "{{ name }}FeatureTests",
+            destinations: .iOS,
+            product: .unitTests,
+            bundleId: "com.{{ author }}.feature.{{ name }}.tests",
+            sources: ["Tests/**"],
+            dependencies: [
+                .target(name: "{{ name }}Feature"),
+                .target(name: "{{ name }}FeatureTesting"),
+            ]
+        ),
+
+
+        // Testing
+        .target(
+            name: "{{ name }}FeatureTesting",
+            destinations: .iOS,
+            product: .framework,
+            bundleId: "com.{{ author }}.feature.{{ name }}.testing",
+            sources: ["Testing/**"],
+            dependencies: [
+                .target(name: "{{ name }}Feature"),
+            ]
+        ),
+
+
+        // Feature
+        .target(
+            name: "{{ name }}Feature",
+            destinations: .iOS,
+            product: .framework,
+            bundleId: "com.{{ author }}.feature.{{ name }}",
+            sources: ["Feature/Sources/**"],
+            resources: ["Feature/Resources/**"],
+            dependencies: [
+                
+            ]
+        ),
+    ]
+)

@@ -1,0 +1,44 @@
+@preconcurrency import ProjectDescription
+
+private let name : Template.Attribute = .required("name")
+private let author : Template.Attribute = .required("author")
+private let currentDate : Template.Attribute = .required("currentDate")
+
+let projectPath = "Projects/Features/\(name)"
+
+let template = Template(
+    description: "Create a new faeture",
+    attributes: [
+        name,
+        author,
+        currentDate
+    ],
+    items: [
+        // Example
+        .item(path: "\(projectPath)/Example", contents:
+                .directory(.relativeToRoot("Scaffolding/TMA/Example/Source"))),
+        .item(path: "\(projectPath)/Example", contents:
+                .directory(.relativeToRoot("Scaffolding/TMA/Example/Resource"))),
+        
+        // Tests
+        .item(path: "\(projectPath)/Tests", contents:
+                .directory(.relativeToRoot("Scaffolding/TMA/Tests/Tests.swift"))),
+        
+        // Feature
+        .item(path: "\(projectPath)/Feature", contents: .directory(.relativeToRoot("Scaffold/TMA/Feature/Sources"))),
+            
+        .item(path: "\(projectPath)/Feature", contents: .directory(.relativeToRoot("Scaffold/TMA/Feature/Resources"))),
+        
+        // Testing
+        .item(path: "\(projectPath)/Testing/Testing.swift", contents: .file(.relativeToRoot("Scaffold/TMA/Testing/Testing.swift"))),
+        
+        
+        // Interface
+        .item(path: "\(projectPath)/Interface/Interface.swift", contents: .file(.relativeToRoot("Scaffold/TMA/Interface/Interface.swift"))),
+        
+        // Project.swift
+        .file(
+            path: "\(projectPath)/Project.swift",
+            templatePath: .relativeToRoot("Scaffold/TMA/Project.stencil"))
+    ]
+)
