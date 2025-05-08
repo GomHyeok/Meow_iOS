@@ -25,17 +25,17 @@ public enum ModuleDependency {
     }
     
     public enum Feature {
-        public static let BaseFeature : TargetDependency = .project(target: "BaseFeature", path: .relativeToRoot("Projects/Feature/Base"))
+        public static let BaseFeature : TargetDependency = .project(target: "BaseFeature", path: .relativeToRoot("Projects/Features/Base"))
         
-        public static let RootFeature : TargetDependency = .project(target: "RootFeature", path: .relativeToRoot("Projects/Feature/Root"))
+        public static let RootFeature : TargetDependency = .project(target: "RootFeature", path: .relativeToRoot("Projects/Features/Root"))
         
-        public static let HomeFeature : TargetDependency = .project(target: "HomeFeature", path: .relativeToRoot("Projects/Feature/Home"))
+        public static let HomeFeature : TargetDependency = .project(target: "HomeFeature", path: .relativeToRoot("Projects/Features/Home"))
         
-        public static let ShopFeature : TargetDependency = .project(target: "ShopFeature", path: .relativeToRoot("Projects/Feature/Shop"))
+        public static let ShopFeature : TargetDependency = .project(target: "ShopFeature", path: .relativeToRoot("Projects/Features/Shop"))
         
-        public static let SettingFeature : TargetDependency = .project(target: "SettingFeature", path: .relativeToRoot("Projects/Feature/Setting"))
+        public static let SettingFeature : TargetDependency = .project(target: "SettingFeature", path: .relativeToRoot("Projects/Features/Setting"))
         
-        public static let UserFeature : TargetDependency = .project(target: "UserFeature", path: .relativeToRoot("Projects/Feature/User"))
+        public static let UserFeature : TargetDependency = .project(target: "UserFeature", path: .relativeToRoot("Projects/Features/User"))
     }
     
     public enum Shared {
@@ -45,7 +45,7 @@ public enum ModuleDependency {
     }
     
     public enum Util {
-        public static let CoreUtil : TargetDependency = .project(target: "CoreUtil", path: .relativeToRoot("Projects/Util/Core"))
+        public static let CoreUtil : TargetDependency = .project(target: "CoreUtil", path: .relativeToRoot("Projects/Utils/CoreUtil"))
     }
     
     public enum ThirdParty {

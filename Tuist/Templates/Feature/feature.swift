@@ -16,13 +16,13 @@ let template = Template(
     items: [
         // Example
         .item(path: "\(projectPath)/Example", contents:
-                .directory(.relativeToRoot("Scaffolding/TMA/Example/Source"))),
+                .directory(.relativeToRoot("Scaffold/TMA/Example/Sources"))),
         .item(path: "\(projectPath)/Example", contents:
-                .directory(.relativeToRoot("Scaffolding/TMA/Example/Resource"))),
+                .directory(.relativeToRoot("Scaffold/TMA/Example/Resources"))),
         
         // Tests
         .item(path: "\(projectPath)/Tests", contents:
-                .directory(.relativeToRoot("Scaffolding/TMA/Tests/Tests.swift"))),
+                .directory(.relativeToRoot("Scaffold/TMA/Tests/Tests.swift"))),
         
         // Feature
         .item(path: "\(projectPath)/Feature", contents: .directory(.relativeToRoot("Scaffold/TMA/Feature/Sources"))),
@@ -31,10 +31,6 @@ let template = Template(
         
         // Testing
         .item(path: "\(projectPath)/Testing/Testing.swift", contents: .file(.relativeToRoot("Scaffold/TMA/Testing/Testing.swift"))),
-        
-        
-        // Interface
-        .item(path: "\(projectPath)/Interface/Interface.swift", contents: .file(.relativeToRoot("Scaffold/TMA/Interface/Interface.swift"))),
         
         // Project.swift
         .file(

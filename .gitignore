@@ -152,3 +152,7 @@ xcuserdata
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 # End of https://www.toptal.com/developers/gitignore/api/swift,xcode,cocoapods,swiftpackagemanager,swiftpm,objective-c
+
+###UserCode###
+Secrets/
+*.xcconfig

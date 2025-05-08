@@ -5,7 +5,65 @@
       location = "group:Projects"
       name = "Projects">
       <FileRef
-         location = "group:Meow/Meow.xcodeproj">
+         location = "group:App/App.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Data/Data.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Domain/Domain.xcodeproj">
+      </FileRef>
+      <Group
+         location = "group:Features"
+         name = "Features">
+         <FileRef
+            location = "group:Base/BaseModule.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:Home/HomeModule.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:Root/RootModule.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:Setting/SettingModule.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:Shop/ShopModule.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:User/UserModule.xcodeproj">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Shared"
+         name = "Shared">
+         <FileRef
+            location = "group:I18N/I18N.xcodeproj">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Utils"
+         name = "Utils">
+         <FileRef
+            location = "group:CoreUtil/CoreUtil.xcodeproj">
+         </FileRef>
+      </Group>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Dependencies">
+      <FileRef
+         location = "group:Tuist/.build/tuist-derived/Alamofire/Alamofire.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Tuist/.build/tuist-derived/Moya/Moya.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Tuist/.build/tuist-derived/RxDataSources/RxDataSources.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Tuist/.build/tuist-derived/RxSwift/RxSwift.xcodeproj">
       </FileRef>
    </Group>
 </Workspace>
