@@ -29,7 +29,9 @@ public protocol DependencyResolvable {
     func resolve<T>() -> T
 }
 
-public final class DependencyInjector : DependencyAssemblable, DependencyResolvable {
+typealias Injector = DependencyAssemblable & DependencyResolvable
+
+public final class DependencyInjector : Injector {
     
     public static let shared : DependencyInjector = .init()
     
@@ -39,6 +41,7 @@ public final class DependencyInjector : DependencyAssemblable, DependencyResolva
         self.container = container
     }
     
+    //test시 assembly 이용하지 않고 container에 직접 등록하기 위해 사용
     public func register<T>(_ instanceType: T.Type, initail: @escaping () -> T) {
         container.register(instanceType) { initail() }
     }

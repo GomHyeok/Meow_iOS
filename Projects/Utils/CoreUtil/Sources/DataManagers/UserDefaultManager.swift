@@ -7,8 +7,16 @@
 
 import Foundation
 
-public final class UserDefaultManager {
+public protocol UserDefaultManager {
+    func setUserDefault<T>(value: T, key: String)
+    func getUserDefault(key: String) -> String?
+    func removeUserDefault(forKey key: String)
+}
+
+public final class DefaultUserDefaultManager : UserDefaultManager {
     private let userDefaults: UserDefaults = .standard
+    
+    public init() { }
     
     public func setUserDefault<T>(value: T, key: String) {
         userDefaults.set(value, forKey: key)
