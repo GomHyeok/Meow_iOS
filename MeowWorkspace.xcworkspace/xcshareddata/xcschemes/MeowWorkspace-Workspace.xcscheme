@@ -126,6 +126,48 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "5B874DC37D39E279D809EF85"
+               BuildableName = "Data_DataSource.bundle"
+               BlueprintName = "Data_DataSource"
+               ReferencedContainer = "container:Projects/Data/Data.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "62CC5AEFD2EA62C7C339CC2C"
+               BuildableName = "Data_DataTest.bundle"
+               BlueprintName = "Data_DataTest"
+               ReferencedContainer = "container:Projects/Data/Data.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "691F56EA69C9C335C65BA8FD"
+               BuildableName = "Data_Repository.bundle"
+               BlueprintName = "Data_Repository"
+               ReferencedContainer = "container:Projects/Data/Data.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "C451FEEB6A08950C17216EE4"
                BuildableName = "Differentiator.framework"
                BlueprintName = "Differentiator"
