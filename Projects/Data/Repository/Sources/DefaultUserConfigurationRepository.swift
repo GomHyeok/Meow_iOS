@@ -15,11 +15,15 @@ public final class DefaultUserConfigurationRepository : UserConfigurationReposit
     
     public init() { }
     
-    public func getConfigurationValue(key: String) -> String? {
-        service.getConfigurationValue(key: key)
+    public func getLangueType(key: String) -> LanguageType? {
+        guard let value = service.getConfigurationValue(key: key) else {
+            return LanguageType.korean
+        }
+        
+        return .init(rawValue: value)
     }
     
-    public func setConfigurationValue<T>(value: T, key: String) {
-        service.setConfigurationValue(value: value, key: key)
+    public func setLangueType(value: LanguageType, key: String) {
+        service.setConfigurationValue(value: value.savingValue, key: key)
     }
 }

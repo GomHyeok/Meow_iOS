@@ -6,7 +6,7 @@
 //
 
 public protocol UserConfigurationRepository {
-    func getConfigurationValue(key : String) -> String?
+    func getLangueType(key : String) -> LanguageType?
     
-    func setConfigurationValue<T>(value : T, key : String)
+    func setLangueType(value : LanguageType, key : String)
 }
