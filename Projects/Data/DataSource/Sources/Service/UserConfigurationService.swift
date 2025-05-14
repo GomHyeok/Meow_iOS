@@ -17,7 +17,9 @@ public protocol UserConfigurationService {
 
 public class DefaultUserConfigurationService : UserConfigurationService {
     
-    private let manager : UserDefaultManager
+    @Injected private var manager : UserDefaultManager
+    
+    public init() { }
     
     public func getConfigurationValue(key: String) -> String? {
         manager.getUserDefault(key: key)

@@ -28,7 +28,13 @@ let project = Project(
                 
                 ModuleDependency.Util.CoreUtil,
                 
-                ModuleDependency.Shared.I18N
+                ModuleDependency.Shared.I18N,
+                
+                ModuleDependency.Data.dataSource,
+                
+                ModuleDependency.Data.repository,
+                
+                ModuleDependency.Domain.interface
             ],
             settings: .settings(
                 base:[:],

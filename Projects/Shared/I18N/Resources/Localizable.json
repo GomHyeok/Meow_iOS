@@ -1,0 +1,16 @@
+{
+    "Title" : {
+        "en" : "Meow",
+        "kr" : "야옹"
+    },
+    
+    "Meow_shop" : {
+        "en" : "SHOP",
+        "kr" : "상점"
+    },
+    
+    "Meow_setting" : {
+        "en" : "SETTING",
+        "kr" : "설정"
+    }
+}
