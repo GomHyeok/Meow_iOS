@@ -45,7 +45,13 @@ let project = Project(
             sources: ["Sources/**"],
             resources: ["Resources/**"],
             dependencies: [
-                ModuleDependency.Domain.interface
+                ModuleDependency.Domain.interface,
+                
+                ModuleDependency.Util.CoreUtil,
+                
+                ModuleDependency.Data.repository,
+                
+                ModuleDependency.ThirdParty.RxSwift
             ]
         ),
     ]
