@@ -30,10 +30,6 @@ let project = Project(
                 
                 ModuleDependency.Shared.I18N,
                 
-                ModuleDependency.Data.dataSource,
-                
-                ModuleDependency.Data.repository,
-                
                 ModuleDependency.Domain.interface
             ],
             settings: .settings(
