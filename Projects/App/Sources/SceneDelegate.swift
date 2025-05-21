@@ -12,16 +12,18 @@ class SceneDelegate : UIResponder, UIWindowSceneDelegate {
     
     var window: RootWindow?
     
+    var rootRouter : RootRouter?
+    
     // Scene생성시 UI를 구성
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let builder = RootBuilder()
-        let rootRouter = builder.build()
+        rootRouter = builder.build()
         
         window = RootWindow(windowScene: windowScene)
         
-        window?.rootViewController = rootRouter.viewController
+        window?.rootViewController = rootRouter?.viewController
         window?.makeKeyAndVisible()
     }
     

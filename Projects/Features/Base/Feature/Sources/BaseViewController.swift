@@ -29,6 +29,12 @@ open class BaseViewController : UIViewController, BaseViewControllerProtocol {
     
     public init() {
         super.init(nibName: nil, bundle: nil)
+        
+        setupViewProperty()
+        setupDelegate()
+        setupHierarchy()
+        setupLayout()
+        setupBind()
     }
     
     public required init?(coder: NSCoder) {
@@ -39,12 +45,6 @@ open class BaseViewController : UIViewController, BaseViewControllerProtocol {
         super.viewDidLoad()
         
         view.backgroundColor = .white
-        
-        setupViewProperty()
-        setupDelegate()
-        setupHierarchy()
-        setupLayout()
-        setupBind()
     }
     
     open func setupViewProperty() { }

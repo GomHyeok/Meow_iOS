@@ -15,7 +15,7 @@ public final class RootBuilder {
         let viewModel = RootViewModel(i18NManager: DependencyInjector.shared.resolve(), userDefaultManager: DependencyInjector.shared.resolve())
         let navigationController = UINavigationController(rootViewController: RootViewController(viewModel: viewModel))
         let router = RootRouter(viewController: navigationController, viewModel: viewModel)
-        
+
         return router
     }
 }

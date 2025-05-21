@@ -7,13 +7,20 @@
 
 import UIKit
 import BaseFeature
+import CoreUtil
 
 public final class RootViewController : BaseViewController {
     private let viewModel : RootViewModelProtocol
     
     init(viewModel: RootViewModelProtocol) {
         self.viewModel = viewModel
+        
         super.init()
+    }
+    
+    override public func viewDidLoad() {
+        super.viewDidLoad()
+        print("viewDidLoad")
     }
     
     @MainActor required init?(coder: NSCoder) {
@@ -30,6 +37,9 @@ public final class RootViewController : BaseViewController {
     
     public override func setupBind() {
         
+        self.rx.viewDidLoad
+            .bind(to: viewModel.viewDidLoad)
+            .disposed(by : disposBag)
     }
     
     public override func setupDelegate() {
