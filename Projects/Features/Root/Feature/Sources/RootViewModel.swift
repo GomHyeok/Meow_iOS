@@ -32,5 +32,6 @@ public class RootViewModel : RootViewModelProtocol {
     init(i18NManager : I18NManager, userDefaultManager : UserDefaultManager) {
         self.i18NManager = i18NManager
         self.userDefaultManager = userDefaultManager
+        
     }
 }
