@@ -64,6 +64,14 @@ let project = Project(
             resources: ["Feature/Resources/**"],
             dependencies: [
                 ModuleDependency.Util.CoreUtil,
+                
+                ModuleDependency.Shared.I18N,
+                
+                ModuleDependency.ThirdParty.RxCocoa,
+                
+                ModuleDependency.ThirdParty.RxSwift,
+                
+                ModuleDependency.Feature.BaseFeature
             ]
         ),
     ]

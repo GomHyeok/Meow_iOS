@@ -11,7 +11,7 @@ public protocol Routable : AnyObject {
     associatedtype ViewModel
 }
 
-public class Router<ViewModel> : Routable {
+open class Router<ViewModel> : Routable {
     
     public let viewController : UIViewController
     public let viewModel : ViewModel
