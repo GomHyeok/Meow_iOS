@@ -7,4 +7,5 @@
 
 public enum UserDefaultKey : String {
     case languageType = "LanguageType"
+    case catName = "CatName"
 }

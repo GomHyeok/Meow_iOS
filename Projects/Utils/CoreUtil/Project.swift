@@ -18,7 +18,7 @@ let project = Project(
             bundleId: "com.Meow.Utils.CoreUtil",
             sources: ["Sources/**"],
             dependencies: [
-                
+                ModuleDependency.ThirdParty.RxCocoa
             ]
         )
     ]
