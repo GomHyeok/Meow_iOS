@@ -20,29 +20,15 @@ public final class RootViewController : BaseViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        print("viewDidLoad")
     }
     
     @MainActor required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    public override func setupViewProperty() {
-        
-    }
-    
-    public override func setupHierarchy() {
-        
-    }
-    
     public override func setupBind() {
         
         self.rx.viewDidLoad
             .bind(to: viewModel.viewDidLoad)
-            .disposed(by : disposBag)
-    }
-    
-    public override func setupDelegate() {
-        
+            .disposed(by : disposeBag)
     }
 }

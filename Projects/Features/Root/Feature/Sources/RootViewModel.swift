@@ -42,7 +42,6 @@ public class RootViewModel : RootViewModelProtocol {
         self.viewDidLoad
             .subscribe({[weak self] _ in
                 guard let self = self else { return }
-                print("viewDidLoad event")
                 guard (self.userDefaultManager.getUserDefault(key: UserDefaultKey.catName.rawValue)) != nil else {
                     self.router?.presend(isFirst: false)
                     return

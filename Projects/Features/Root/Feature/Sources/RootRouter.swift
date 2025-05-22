@@ -13,20 +13,35 @@ public protocol RootRouting : AnyObject {
     func presend(isFirst : Bool)
 }
 
+public protocol LandingListener : AnyObject {
+    func didCompleteLanding()
+}
+
 public class RootRouter : Router<RootViewModel> & RootRouting {
     override init(viewController: UIViewController, viewModel: RootViewModel) {
         super.init(viewController: viewController, viewModel: viewModel)
         viewModel.router = self
-        //viewModel.bind()
+    }
+    
+    private func attachLanding() {
+        
+    }
+    
+    private func attachHome() {
+        
     }
 }
 
-extension RootRouter {
+extension RootRouter : LandingListener {
     public func presend(isFirst: Bool) {
         if isFirst {
-            print("is true")
+            attachLanding()
         } else {
-            print("is false")
+            attachHome()
         }
+    }
+    
+    public func didCompleteLanding() {
+        
     }
 }
