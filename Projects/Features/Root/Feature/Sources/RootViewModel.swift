@@ -43,11 +43,11 @@ public class RootViewModel : RootViewModelProtocol {
             .subscribe({[weak self] _ in
                 guard let self = self else { return }
                 guard (self.userDefaultManager.getUserDefault(key: UserDefaultKey.catName.rawValue)) != nil else {
-                    self.router?.presend(isFirst: false)
+                    self.router?.present(isFirst: false)
                     return
                 }
                 
-                self.router?.presend(isFirst: true)
+                self.router?.present(isFirst: true)
             })
             .disposed(by: disposBag)
     }

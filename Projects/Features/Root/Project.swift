@@ -71,7 +71,9 @@ let project = Project(
                 
                 ModuleDependency.ThirdParty.RxSwift,
                 
-                ModuleDependency.Feature.BaseFeature
+                ModuleDependency.Feature.BaseFeature,
+                
+                ModuleDependency.Feature.HomeFeature
             ]
         ),
     ]
