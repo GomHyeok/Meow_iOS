@@ -16,7 +16,7 @@ let project = Project(
             name: "I18NTests",
             destinations: .iOS,
             product: .unitTests,
-            bundleId: "com.CoinViewer.I18N.tests",
+            bundleId: "com.Meow.I18N.tests",
             infoPlist: .default,
             sources: ["Tests/**"],
             dependencies: [
@@ -29,7 +29,7 @@ let project = Project(
             name: "I18NTesting",
             destinations: .iOS,
             product: .staticLibrary,
-            bundleId: "com.CoinViewer.I18N.testing",
+            bundleId: "com.Meow.I18N.testing",
             sources: ["Testing/**"],
             dependencies: [
                 .target(name: "I18N"),
@@ -41,7 +41,7 @@ let project = Project(
             name: "I18N",
             destinations: .iOS,
             product: .framework,
-            bundleId: "com.CoinViewer.I18N",
+            bundleId: "com.Meow.I18N",
             sources: ["Sources/**"],
             resources: ["Resources/**"],
             dependencies: [

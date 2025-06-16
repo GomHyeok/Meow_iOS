@@ -39,6 +39,9 @@
          location = "group:Shared"
          name = "Shared">
          <FileRef
+            location = "group:DSKit/DSKit.xcodeproj">
+         </FileRef>
+         <FileRef
             location = "group:I18N/I18N.xcodeproj">
          </FileRef>
       </Group>

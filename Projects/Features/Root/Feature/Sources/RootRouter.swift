@@ -59,6 +59,7 @@ public class RootRouter : Router<RootViewModel> & RootRouting {
 
 extension RootRouter : LandingListener {
     public func present(isFirst: Bool) {
+        print(isFirst)
         if isFirst {
             attachLanding()
         } else {
