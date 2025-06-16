@@ -33,7 +33,16 @@ public final class HomeViewController : BaseViewController {
     }
     
     override public func setupBind() {
+        self.rx.viewDidLoad
+            .bind(to: self.viewModel.viewDidLoad)
+            .disposed(by: disposeBag)
         
+        self.viewModel.updateStaticUI
+            .drive(onNext : { [weak self] homeRO in
+                guard let self = self else { return }
+                
+            })
+            .disposed(by: disposeBag)
     }
     
     override public func setupLayout() {
