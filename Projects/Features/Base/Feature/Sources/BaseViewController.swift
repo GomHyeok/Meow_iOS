@@ -34,7 +34,7 @@ open class BaseViewController : UIViewController, BaseViewControllerProtocol {
         setupDelegate()
         setupHierarchy()
         setupLayout()
-        setupBind()
+        //setupBind()
     }
     
     public required init?(coder: NSCoder) {

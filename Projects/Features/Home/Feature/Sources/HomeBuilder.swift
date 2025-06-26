@@ -14,6 +14,7 @@ public final class HomeBuilder {
     public func build() -> HomeRouter {
         let viewModel : HomeViewModelProtocol = HomeViewModel(i18Nmanager: DependencyInjector.shared.resolve(), languageRepository: DependencyInjector.shared.resolve())
         let viewController : HomeViewController = HomeViewController(viewModel: viewModel)
+        
         let router : HomeRouter = HomeRouter(viewController: viewController, viewModel: viewModel as! HomeViewModel)
         
         return router

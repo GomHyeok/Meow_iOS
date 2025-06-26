@@ -9,6 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import BaseFeature
+import CommonUI
 
 public final class HomeViewController : BaseViewController {
     
@@ -16,7 +17,6 @@ public final class HomeViewController : BaseViewController {
     
     public init(viewModel : HomeViewModelProtocol) {
         self.viewModel = viewModel
-        
         super.init()
     }
     
@@ -29,7 +29,14 @@ public final class HomeViewController : BaseViewController {
     }
     
     override public func setupHierarchy() {
-        
+        view.addSubview(background)
+        view.addSubview(shopImageText)
+        view.addSubview(settingImageText)
+    }
+    
+    override public func setupViewProperty() {
+        shopImageText.configure(image: UIImage(systemName: "cart")!, title: "")
+        settingImageText.configure(image: UIImage(systemName: "gearshape")!, title: "")
     }
     
     override public func setupBind() {
@@ -40,12 +47,52 @@ public final class HomeViewController : BaseViewController {
         self.viewModel.updateStaticUI
             .drive(onNext : { [weak self] homeRO in
                 guard let self = self else { return }
-                
+                print(homeRO)
             })
             .disposed(by: disposeBag)
     }
     
     override public func setupLayout() {
+        // Background
+        NSLayoutConstraint.activate([
+            background.topAnchor.constraint(equalTo: view.topAnchor),
+            background.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            background.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            background.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
         
+        // ImageTexts
+        NSLayoutConstraint.activate([
+            shopImageText.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 11),
+            shopImageText.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            shopImageText.heightAnchor.constraint(equalToConstant: 70),
+            shopImageText.widthAnchor.constraint(equalToConstant: 49)
+        ])
+        
+        NSLayoutConstraint.activate([
+            settingImageText.topAnchor.constraint(equalTo: shopImageText.bottomAnchor, constant: 11),
+            settingImageText.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            settingImageText.heightAnchor.constraint(equalToConstant: 70),
+            settingImageText.widthAnchor.constraint(equalToConstant: 49)
+        ])
     }
+    
+    private var background : UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.image = CommonUIAsset.homeCat.image
+        return imageView
+    }()
+    
+    private var shopImageText : VerticalImageText = {
+        let imageText = VerticalImageText()
+        imageText.translatesAutoresizingMaskIntoConstraints = false
+        return imageText
+    }()
+    
+    private var settingImageText : VerticalImageText = {
+        let imageText = VerticalImageText()
+        imageText.translatesAutoresizingMaskIntoConstraints = false
+        return imageText
+    }()
 }

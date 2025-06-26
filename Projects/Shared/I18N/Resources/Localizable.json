@@ -12,12 +12,12 @@
     "Meow_setting" : {
         "en" : "SETTING",
         "kr" : "설정"
-    }
+    },
     
     "Meow_affection" : {
         "en" : "Affection",
         "kr" : "애정도"
-    }
+    },
     
     "Meow_talk" : {
         "en" : "Start Talk",
