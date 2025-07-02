@@ -39,7 +39,7 @@ public final class HomeViewController : BaseViewController {
         settingImageText.configure(image: UIImage(systemName: "gearshape")!, title: "")
     }
     
-    override public func setupBind() {
+    public override func setupBind() {
         self.rx.viewDidLoad
             .bind(to: self.viewModel.viewDidLoad)
             .disposed(by: disposeBag)
@@ -47,7 +47,8 @@ public final class HomeViewController : BaseViewController {
         self.viewModel.updateStaticUI
             .drive(onNext : { [weak self] homeRO in
                 guard let self = self else { return }
-                print(homeRO)
+                self.shopImageText.titleConfigure(title: homeRO.shop)
+                self.settingImageText.titleConfigure(title: homeRO.setting)
             })
             .disposed(by: disposeBag)
     }
@@ -94,5 +95,33 @@ public final class HomeViewController : BaseViewController {
         let imageText = VerticalImageText()
         imageText.translatesAutoresizingMaskIntoConstraints = false
         return imageText
+    }()
+    
+    private var infoView : UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .black
+        view.layer.cornerRadius = 9
+        return view
+    }()
+    
+    private var infoLabel : UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private var affectionView : UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .red
+        view.layer.cornerRadius = 9
+        return view
+    }()
+    
+    private var affectionLabel : UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
     }()
 }

@@ -30,11 +30,11 @@ open class BaseViewController : UIViewController, BaseViewControllerProtocol {
     public init() {
         super.init(nibName: nil, bundle: nil)
         
+        setupBind()
         setupViewProperty()
         setupDelegate()
         setupHierarchy()
         setupLayout()
-        //setupBind()
     }
     
     public required init?(coder: NSCoder) {

@@ -24,7 +24,7 @@ public final class VerticalImageText : UIView, ImageText {
         labelView.translatesAutoresizingMaskIntoConstraints = false
         labelView.backgroundColor = .black
         labelView.textAlignment = .center
-        labelView.font = UIFont.systemFont(ofSize: 13, weight: .medium)
+        labelView.font = UIFont.systemFont(ofSize: 13, weight: .bold)
         labelView.textColor = .white
         labelView.adjustsFontSizeToFitWidth = true
         labelView.minimumScaleFactor = 0.5
@@ -38,7 +38,7 @@ public final class VerticalImageText : UIView, ImageText {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
-        stackView.spacing = 8
+        stackView.spacing = 6
         stackView.alignment = .fill
         stackView.distribution = .fill
         return stackView
@@ -67,7 +67,7 @@ public final class VerticalImageText : UIView, ImageText {
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
             stackView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            imageView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.7)
+            imageView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.67)
         ])
     }
     
