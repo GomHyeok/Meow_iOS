@@ -26,7 +26,6 @@ public final class RootViewController : BaseViewController {
         fatalError("init(coder:) has not been implemented")
     }
     public override func setupBind() {
-        
         self.rx.viewDidLoad
             .bind(to: viewModel.viewDidLoad)
             .disposed(by : disposeBag)

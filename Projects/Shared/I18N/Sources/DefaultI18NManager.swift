@@ -29,6 +29,7 @@ public final class DefaultI18NManager : I18NManager {
     
     public func getLangugeType() -> LanguageType {
         guard let type = repository.getLangueType(key: UserDefaultKey.languageType.rawValue) else {
+            repository.setLangueType(value: LanguageType.korean, key: UserDefaultKey.languageType.rawValue)
             return LanguageType.korean
         }
         

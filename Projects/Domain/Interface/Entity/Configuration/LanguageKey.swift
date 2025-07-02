@@ -10,4 +10,6 @@ public enum LanguageKey : String {
     case title = "Title"
     case shop = "Meow_shop"
     case setting = "Meow_setting"
+    case affection = "Meow_affection"
+    case talk = "Meow_talk"
 }

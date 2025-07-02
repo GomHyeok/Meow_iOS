@@ -84,6 +84,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "466AA96A5A7249AADE3D6105"
+               BuildableName = "CommonUI.framework"
+               BlueprintName = "CommonUI"
+               ReferencedContainer = "container:Projects/Shared/DSKit/DSKit.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "2705559F358CA54EEAFD1B72"
                BuildableName = "CoreUtil.framework"
                BlueprintName = "CoreUtil"

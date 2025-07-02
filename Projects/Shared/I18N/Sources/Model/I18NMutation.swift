@@ -8,9 +8,9 @@
 import DomainInterface
 
 public struct I18NMutation {
-    public var languageType : LanguageType?
+    public var languageType : LanguageType
     
-    public init(languageType : LanguageType? = nil) {
+    public init(languageType : LanguageType = LanguageType.korean) {
         self.languageType = languageType
     }
 }

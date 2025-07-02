@@ -63,7 +63,8 @@ let project = Project(
             dependencies: [
                 ModuleDependency.Domain.interface,
                 ModuleDependency.Shared.I18N,
-                ModuleDependency.Util.CoreUtil
+                ModuleDependency.Util.CoreUtil,
+                ModuleDependency.Shared.CommonUI
             ]
         ),
     ]
